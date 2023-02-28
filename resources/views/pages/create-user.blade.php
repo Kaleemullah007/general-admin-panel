@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+Create User
+@endsection
 @section('content')
     <div class="container m-3 bg-light rounded">
         <div class="row ">

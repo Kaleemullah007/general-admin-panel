@@ -1,41 +1,58 @@
 @extends('layouts.master')
 
+@section('title')
+Create Group
+@endsection
+
 @section('content')
     <div class="container m-3  bg-light rounded">
-        <div class="row pt-3">
+        <div class="row">
             <div>
-                <h4>{{__('en.Create Groups')}}</h4>
+                <h4>{{__('en.Create Group')}}</h4>
             </div>
         </div>
         <hr>
         <form method="POST" action="" enctype="">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <label for="createGroupRole" class="form-label fs-6">{{__('en.Name')}}</label>
-                    <input type="text" class="form-control bg-grey border-secondary @error('createGroupRole') is-invalid @enderror" placeholder="{{__('en.Name')}}"
-                        id="createGroupRole" name="createGroupRole"  value="{{ old('createGroupRole') }}" autocomplete="createGroupRole" required autofocus>
-                    @error('createGroupRole')
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label for="Name" class="form-label fs-6">{{__('en.Name')}}</label>
+                    <input type="text" class="form-control bg-grey border-secondary @error('Name') is-invalid @enderror" placeholder="{{__('en.Name')}}"
+                        id="Name" name="Name"  value="{{ old('Name') }}" autocomplete="Name" required autofocus>
+                    @error('Name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <label for="createGroupRoleDesc" class="form-label fs-6">{{__('en.Description')}}</label>
-                    <input type="text" class="form-control bg-grey border-secondary @error('createGroupRoleDesc') is-invalid @enderror" placeholder="{{__('en.Description')}}"
-                        id="createGroupRoleDesc" name="createGroupRoleDesc"  value="{{ old('createGroupRoleDesc') }}" autocomplete="createGroupRoleDesc" required>
-                    @error('createGroupRoleDesc')
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label for="Description" class="form-label fs-6">{{__('en.Description')}}</label>
+                    <input type="text" class="form-control bg-grey border-secondary @error('Description') is-invalid @enderror" placeholder="{{__('en.Description')}}"
+                        id="Description" name="Description"  value="{{ old('Description') }}" autocomplete="Description" required>
+                    @error('Description')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <label for="createGroupStatus" class="form-label fs-6">{{__('en.Status')}}</label>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label for="Users" class="form-label fs-6">{{__('en.Users')}}</label>
+                    <select class="form-select bg-grey mb-2 border-dark @error('Users') is-invalid @enderror" name="Users" id="Users" autocomplete="Users" required>
+                        <option>{{__('en.Choose')}}</option>
+                        <option value="1" @if(old('Users') == 1) 'selected' @endif >{{__('en.User')}} 1</option>
+                        <option value="2" @if(old('Users') == 2) 'selected' @endif >{{__('en.User')}} 2</option>
+                    </select>
+                    @error('Users')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label for="Status" class="form-label fs-6">{{__('en.Status')}}</label>
                         <br>
-                    <input type="checkbox" data-size="sm" data-toggle="toggle" data-on="Active"
+                    <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
-                    @error('createGroupStatus')
+                    @error('Status')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

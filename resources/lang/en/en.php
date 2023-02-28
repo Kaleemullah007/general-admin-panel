@@ -363,7 +363,7 @@ return
         
     "Groups"=>"Groups",
     "Manage Users"=>"Manage Users",
-    "Create Groups"=>"Create Groups",
+    "Create Group"=>"Create Group",
     "Modules"=>"Modules",
     "Module Name"=>"Module Name",
     "Create module"=>"Create module",
@@ -372,7 +372,10 @@ return
     "Create Module"=>"Create Module",
     "Permission Name"=>"Permission Name",
     "Permission Status"=>"Permission Status",
-    "Save"=>"Save"
+    "Save"=>"Save",
+    "Profile Setting"=>"Profile Setting",
+    "User"=>"User"
+
 
 ];
 ?>

@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+Create Module
+@endsection
 @section('content')
     <div class="container m-3 bg-light rounded">
         <div class="row">
@@ -24,7 +27,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <label for="Status" class="form-label fs-6">{{__('en.Status')}}</label><br>
-                    <input type="checkbox" data-size="md" data-toggle="toggle" data-on="Active"
+                    <input type="checkbox" checked data-size="md" data-toggle="toggle" data-on="Active"
                         data-off="Inactive" data-onstyle="success" data-offstyle="danger">
                     @error('Status')
                         <span class="invalid-feedback" role="alert">
@@ -42,7 +45,7 @@
                         </span>
                     @enderror
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                <div class="col-lg-2 col-md-6 col-12 mt-3">
                     <label for="permissionStatus" class="form-label fs-6">{{__('en.Permission Status')}}</label><br>
                     <input type="checkbox" checked data-size="md"  data-toggle="toggle" data-on="Active"
                         data-off="Inactive" data-onstyle="success" data-offstyle="danger">
@@ -52,9 +55,9 @@
                         </span>
                     @enderror
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                <div class="col-lg-2 col-md-6 col-12 mt-3">
                     <label for="permissionAction" class="form-label fs-6">{{__('en.Action')}}</label><br>
-                    <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i> Add</button>
+                    <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i></button>
                 </div>
             </div>
         </form>

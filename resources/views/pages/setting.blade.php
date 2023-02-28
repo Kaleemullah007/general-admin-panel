@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+Settings
+@endsection
 @section('content')
     <div class="container">
         <div class="container">
@@ -41,7 +44,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-3">
                                 <label for="settingAction" class="form-label fs-6">{{__('en.Action')}}</label><br>
-                                <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i> Delete</button>
+                                <button type="button" class="btn btn-danger"><i class="bi bi-dash-lg"></i></button>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-3">
                                 <input type="text" class="form-control bg-grey border-secondary @error('settingName') is-invalid @enderror" id="settingName" name="settingName"
@@ -62,7 +65,7 @@
                                 @enderror
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 mt-3">
-                                <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i> Add</button>
+                                <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i></button>
                             </div>
                         </div>
                         <div class="row">

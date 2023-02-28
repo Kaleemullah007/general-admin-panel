@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Group listing
+Group Listing
 @endsection
 
 @section('content')
@@ -26,17 +26,19 @@ Group listing
             <div class="table-responsive">
                 <table class="table border table-striped">
                     <thead>
-                        <tr class="d-flex">
-                            <th class="col-3">{{__('en.Name')}}</th>
-                            <th class="col-6">{{__('en.Description')}}</th>
-                            <th class="col-3">{{__('en.Action')}}</th>
+                        <tr>
+                            <th>{{__('en.Name')}}</th>
+                            <th>{{__('en.Description')}}</th>
+                            <th>{{__('en.Users')}}</th>
+                            <th>{{__('en.Action')}}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="d-flex">
-                            <td class="col-3">Owner</td>
-                            <td class="col-6">owner</td>
-                            <td class="col-3">
+                        <tr>
+                            <td>Owner</td>
+                            <td>This is a Description.</td>
+                            <td>2</td>
+                            <td>
                                 <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"
                                     class="box border border-1 border-secondary rounded-pill px-2 py-0 fs-6 link-secondary">
                                     <i class="bi bi-eye-fill"></i></a>
@@ -48,10 +50,11 @@ Group listing
                                     <i class="bi bi-trash-fill"></i></a>
                             </td>
                         </tr>
-                        <tr class="d-flex">
-                            <td class="col-3">Admin</td>
-                            <td class="col-6">admin</td>
-                            <td class="col-3">
+                        <tr>
+                            <td>Admin</td>
+                            <td>This is a Description.</td>
+                            <td>5</td>
+                            <td>
                                 <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"
                                     class="box border border-1 border-secondary rounded-pill px-2 py-0 fs-6 link-secondary">
                                     <i class="bi bi-eye-fill"></i></a>
@@ -69,7 +72,6 @@ Group listing
 
             {{-- row per page and pagination file below --}}
             @include('pages.pagination')
-
 
         </div>
     </div>

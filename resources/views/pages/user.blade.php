@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+User Listing
+@endsection
 @section('content')
     <div class="container">
         <div class="container">
@@ -74,7 +77,7 @@
                             <td>abc123@gmail.com</td>
                             <td>+923001234567</td>
                             <td>
-                                <input type="checkbox" data-size="sm" data-toggle="toggle" data-on="Active"
+                                <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
                             </td>
                             <td>
@@ -137,7 +140,7 @@
                     </span>
                 @enderror
                 <label for="userStatus" class="form-label mt-3">{{__('en.Status')}}</label><br>
-                    <input type="checkbox" data-size="sm" data-toggle="toggle" data-on="Active"
+                    <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
                 @error('userStatus')
                     <span class="invalid-feedback" role="alert">

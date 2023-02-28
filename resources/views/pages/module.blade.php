@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+Module Listing
+@endsection
 @section('content')
     <div class="container">
         <div class="container">
@@ -49,7 +52,7 @@
 
                             </td>
                             <td>
-                                <input type="checkbox" data-size="sm" data-toggle="toggle" data-on="Active"
+                                <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
                             </td>
                         </tr>
@@ -83,7 +86,7 @@
                     </span>
                 @enderror
                 <label for="moduleStatus" class="form-label mt-3">{{__('en.Status')}}</label><br>
-                    <input type="checkbox" data-size="sm" data-toggle="toggle" data-on="Active"
+                    <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
                 @error('moduleStatus')
                     <span class="invalid-feedback" role="alert">
