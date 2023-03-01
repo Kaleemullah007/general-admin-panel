@@ -11,7 +11,7 @@ Create Module
             </div>
         </div>
         <hr>
-        <form method="POST" action="" enctype="">
+        <form method="POST" action="">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
                     <label for="Name" class="form-label fs-6">{{__('en.Module Name')}} </label>
@@ -34,10 +34,13 @@ Create Module
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                    @php
+                        $module_id = 0;
+                    @endphp
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 mt-3">
                     <label for="permissionName" class="form-label fs-6">{{__('en.Permission Name')}}</label>
-                    <input type="text" class="form-control bg-grey border-secondary @error('permissionName') is-invalid @enderror" id="permissionName" name="permissionName"
+                    <input type="text" class="form-control bg-grey border-secondary @error('permissionName') is-invalid @enderror" id="permissionName" name="permission_name[{{$module_id}}][]"
                     placeholder="View" value="{{ old('permissionName') }}" autocomplete="permissionName" required>
                     @error('permissionName')
                         <span class="invalid-feedback" role="alert">
@@ -60,8 +63,8 @@ Create Module
                     <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i></button>
                 </div>
             </div>
+            <!-- save button row included below -->
+            @include('pages.table-footer')
         </form>
-        <!-- save button row included below -->
-        @include('pages.table-footer')
     </div>
 @endsection

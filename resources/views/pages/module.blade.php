@@ -39,6 +39,7 @@ Module Listing
                             <th>{{__('en.Name')}}</th>
                             <th>{{__('en.Permissions')}}</th>
                             <th>{{__('en.Status')}}</th>
+                            <th>{{__('en.Action')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,11 +50,21 @@ Module Listing
                                 <span class="badge text-bg-primary fw-normal py-2">Edit</span>
                                 <span class="badge text-bg-info fw-normal py-2 text-light">View</span>
                                 <span class="badge text-bg-danger fw-normal py-2">Delete</span>
-
                             </td>
                             <td>
                                 <input type="checkbox" checked data-size="sm" data-toggle="toggle" data-on="Active"
                                     data-off="Inactive" data-onstyle="success" data-offstyle="danger">
+                            </td>
+                            <td>
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"
+                                    class="box border border-1 border-secondary rounded-pill px-2 py-0 fs-6 link-secondary">
+                                    <i class="bi bi-eye-fill"></i></a>
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"
+                                    class="box border border-1 border-secondary rounded-pill px-2 py-0 fs-6 link-secondary mx-2">
+                                    <i class="bi bi-pencil"></i></a>
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"
+                                    class="box border border-1 border-secondary rounded-pill px-2 py-0 fs-6 link-secondary">
+                                    <i class="bi bi-trash-fill"></i></a>
                             </td>
                         </tr>
                     </tbody>

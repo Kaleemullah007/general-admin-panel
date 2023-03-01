@@ -12,7 +12,6 @@ Profile Setting
                 </div>
             </div>
             <hr>
-
                     <form method="POST" action="" enctype="">            
                         <div class="row d-flex justify-content-around mt-3">
                             <div class="col-lg-9 col-12">
