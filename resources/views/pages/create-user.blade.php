@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+Create User
+@endsection
 @section('content')
     <div class="container m-3 bg-light rounded">
         <div class="row ">
@@ -8,7 +11,7 @@
             </div>
         </div>
         <hr>
-        <form method="POST" action="" enctype="">
+        <form method="POST" action="">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 pt-1">
                     <label for="Fname" class="form-label fs-6">{{__('en.First Name')}} : </label>
@@ -22,7 +25,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 pt-1">
                     <label for="Lname" class="form-label fs-6">{{__('en.Last Name')}} : </label>
-                    <input type="email" class="form-control bg-grey mb-2 border-dark @error('Lname') is-invalid @enderror" id="Lname" name="Lname"
+                    <input type="text" class="form-control bg-grey mb-2 border-dark @error('Lname') is-invalid @enderror" id="Lname" name="Lname"
                         placeholder="Musk" value="{{ old('Lname') }}" autocomplete="Lname" required>
                     @error('Lname')
                         <span class="invalid-feedback" role="alert">
@@ -32,7 +35,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 pt-1">
                     <label for="name" class="form-label fs-6">{{__('en.Username')}} : </label>
-                    <input type="text" class="form-control bg-grey mb-2 border-dark @error('name') is-invalid @enderror" id="name" id="name"
+                    <input type="text" class="form-control bg-grey mb-2 border-dark @error('name') is-invalid @enderror" name="name" id="name"
                         placeholder="Elon Musk" value="{{ old('name') }}" autocomplete="name" required>
                     @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -42,7 +45,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 pt-1">
                     <label for="Group" class="form-label fs-6">{{__('en.Group')}} : </label>
-                    <select class="form-select bg-grey mb-2 border-dark @error('Group') is-invalid @enderror" name="Group" id="Group" autocomplete="Group" required>
+                    <select class="form-select bg-grey mb-2 border-dark @error('Group') is-invalid @enderror" multiple name="Group" id="Group" autocomplete="Group" required>
                         <option>{{__('en.Choose')}}</option>
                         <option value="1" @if(old('Group') == 1) 'selected' @endif >{{__('en.Group')}} 1</option>
                         <option value="2" @if(old('Group') == 2) 'selected' @endif >{{__('en.Group')}} 2</option>
@@ -55,7 +58,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 pt-1">
                     <label for="Phone" class="form-label fs-6">{{__('en.Phone')}} : </label>
-                    <input type="text" class="form-control bg-grey mb-2 border-dark @error('Phone') is-invalid @enderror" id="Phone" name="Phone"
+                    <input type="phone" class="form-control bg-grey mb-2 border-dark @error('Phone') is-invalid @enderror" id="Phone" name="Phone"
                         placeholder="+923001234567" value="{{ old('Phone') }}" autocomplete="Phone" required>
                     @error('Phone')
                         <span class="invalid-feedback" role="alert">
@@ -94,8 +97,8 @@
                     @enderror
                 </div>
             </div>
+            <!-- save button row included below -->
+            @include('pages.table-footer')
         </form>
-        <!-- save button row included below -->
-        @include('pages.table-footer')
     </div>
 @endsection

@@ -4,7 +4,6 @@
 Dashboard
 @endsection
 
-
 @section('content')
     <section id="dashboard-top-sec">
         <div class="container-fluid">

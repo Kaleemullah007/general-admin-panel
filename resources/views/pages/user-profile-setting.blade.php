@@ -1,18 +1,20 @@
 @extends('layouts.master')
 
+@section('title')
+Profile Setting
+@endsection
 @section('content')
     <div class="container">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h4>{{__('en.Settings')}}</h4>
+                    <h4>{{__('en.Profile Setting')}}</h4>
                 </div>
             </div>
             <hr>
-
                     <form method="POST" action="" enctype="">            
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-lg-8 col-12">
+                        <div class="row d-flex justify-content-around mt-3">
+                            <div class="col-lg-9 col-12">
                                 <div class="row d-flex">
                                     <div class="col-lg-6 col-md-6 col-12 pt-2">
                                         <label for="firstName" class="form-label pt-1 fs-6">{{__('en.First Name')}}</label>
@@ -86,11 +88,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="">
-                                    <img class="img img-thumbnail mt-4 mb-2" src="/assets/images/user1.png" alt="">
+                            <div class="col-lg-3 col-md-6 col-12 ">
+                                <img class="img img-thumbnail mt-4 mb-2 d-block mx-auto" src="/assets/images/user1.png" alt="">
+                                <div class="d-flex justify-content-center">
+                                    <input type="file" class="w-75 mt-4 form-control bg-grey float-center  @error('profileImg') is-invalid @enderror" id="profileImg" name="profileImg"  value="{{ old('profileImg') }}" autocomplete="profileImg" required>
                                 </div>
-                                <input type="file" class="mt-4 form-control bg-grey  @error('profileImg') is-invalid @enderror" id="profileImg" name="profileImg"  value="{{ old('profileImg') }}" autocomplete="profileImg" required>
                             </div>
                         </div>
                         <!-- save button row included below -->
