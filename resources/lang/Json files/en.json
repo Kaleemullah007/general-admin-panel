@@ -235,7 +235,31 @@
     "Permission Status":"Permission Status",
     "Save":"Save",
     "Profile Setting":"Profile Setting",
-    "User":"User"
+    "User":"User",
+    "Emails":"Emails",
+    "Placeholder":"Placeholder",
+    "Placeholders":"Placeholders",
+    "Template":"Template",
+    "Templates":"Templates",
+    "General Settings":"General Settings",
+    "Subject":"Subject",
+    "Message":"Message",
+    "Blogs":"Blogs",
+    "Blog":"Blog",
+    "Feature Image":"Feature Image",
+    "Title":"Title",
+    "Tags":"Tags",
+    "Tag":"Tag",
+    "Publish Schedule":"Publish Schedule",
+    "Create Blog":"Create Blog",
+    "Short Description":"Short Description",
+    "Long Description":"Long Description",
+    "Schedule Publish":"Schedule Publish",
+    "Edit Blog":"Edit Blog"
 
+
+
+
+    
 }
 
