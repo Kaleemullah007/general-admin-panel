@@ -14,13 +14,8 @@ Settings
             <hr>
             <div class="row p-3">
                 <div class="col-12 shadow-css">
-                    {{-- <div class="row">
-                        <div class="bg-grey p-3">
-                            <h5>{{__('en.System Settings')}}</h5>
-                        </div>
-                    </div> --}}
-                    {{-- form for system setting --}}
-                    <form method="POST" action="" enctype="">
+                    {{-- form for general setting --}}
+                    <form method="POST" action="">
                         <div class="row pt-2">
                             <div class="col-lg-4 col-md-6 col-12 mt-3">
                                 <label for="settingName" class="form-label fs-6">{{__('en.Name')}}</label>
@@ -73,7 +68,7 @@ Settings
                             @include('pages.table-footer')
                         </div>
                     </form>
-                    {{-- end form system setting --}}                    
+                    {{-- end form general setting --}}                    
                 </div>
             </div>
 

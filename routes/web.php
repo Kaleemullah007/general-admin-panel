@@ -49,6 +49,11 @@ Route::group([
         Route::get('/create-module', [SettingController::class, 'createModule'])->name('create-module');
         Route::get('/user', [SettingController::class, 'User'])->name('user');
         Route::get('/create-user', [SettingController::class, 'createUser'])->name('create-user');
+        Route::get('/email-placeholder', [SettingController::class, 'emailPlaceholder'])->name('email-placeholder');
+        Route::get('/email-template', [SettingController::class, 'emailTemplate'])->name('email-template');
+        Route::get('/create-blog', [SettingController::class, 'createBlog'])->name('create-blog');
+        Route::get('/edit-blog', [SettingController::class, 'editBlog'])->name('edit-blog');
+        Route::get('/blog', [SettingController::class, 'Blog'])->name('blog');
 
 
 

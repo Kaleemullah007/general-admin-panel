@@ -87,4 +87,30 @@ class SettingController extends Controller
     {
         return view('pages.setting');
     }
+    
+    public function EmailPlaceholder()
+    {
+        return view('pages.email-placeholder');
+    }
+        
+    public function EmailTemplate()
+    {
+        return view('pages.email-template');
+    }
+            
+    public function createBlog()
+    {
+        return view('pages.create-blog');
+    }     
+
+    public function editBlog()
+    {
+        return view('pages.edit-blog');
+    }
+        
+    public function Blog()
+    {
+        return view('pages.blog');
+    }
+
 }

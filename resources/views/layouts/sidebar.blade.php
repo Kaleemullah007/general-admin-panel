@@ -10,10 +10,12 @@
 
                           <li class="{{ request()->is('manageUser/*') ? 'active' : '' }} collapsed"
                               data-bs-toggle="collapse" data-bs-target="#ManageUser" aria-expanded="true">
-                              <a href="#"><i class="bi fs-5 pe-2 bi-person-square"></i><span>{{ __('en.Manage Users') }}</span>
+                              <a href="#"><i
+                                      class="bi fs-5 pe-2 bi-person-square"></i><span>{{ __('en.Manage Users') }}</span>
                                   <i class="bi bi-caret-down-fill right"></i></a>
                           </li>
-                          <ul class="submenu collapse {{ request()->is('manageUser/*') ? 'show' : '' }}" id="ManageUser">
+                          <ul class="submenu collapse {{ request()->is('manageUser/*') ? 'show' : '' }}"
+                              id="ManageUser">
 
                               <li class="{{ request()->route()->getName() == 'group'? 'active': '' }}">
                                   <a href="{{ route('group') }}"><i class="bi fs-5 pe-2 bi-bounding-box"></i><span
@@ -25,14 +27,49 @@
                                           class="hide-menu">{{ __('en.Modules') }}</span></a>
                               </li>
                               <li class="{{ request()->route()->getName() == 'user'? 'active': '' }}">
-                                <a href="{{ route('user') }}"><i class="bi fs-5 pe-2 bi-people-fill"></i><span
-                                        class="hide-menu">{{ __('en.Users') }}</span></a>
+                                  <a href="{{ route('user') }}"><i class="bi fs-5 pe-2 bi-people-fill"></i><span
+                                          class="hide-menu">{{ __('en.Users') }}</span></a>
                               </li>
-                              <li class="{{ request()->route()->getName() == 'setting'? 'active': '' }}">
-                                <a href="{{ route('setting') }}"><i class="bi fs-5 pe-2 bi-gear"></i><span
-                                        class="hide-menu">{{ __('en.Settings') }}</span></a>
-                              </li>
+                              <li class="{{ request()->route()->getName() == 'blog'? 'active': '' }}">
+                                <a href="{{ route('blog') }}"><i class="bi fs-5 pe-2 bi-journal-richtext"></i><span
+                                        class="hide-menu">{{ __('en.Blogs') }}</span></a>
+                            </li>
+
                           </ul>
+                          
+                              {{-- setting Route --}}
+                            <li class="{{ request()->is('settings/*') ? 'active' : '' }} collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="true">
+                                <a href="#"><i class="bi fs-5 pe-2 bi-gear"></i><span>{{ __('en.Settings') }}</span>
+                                    <i class="bi bi-caret-down-fill right"></i></a>
+                            </li>
+                            <ul class="submenu collapse {{ request()->is('settings/*') ? 'show' : '' }}"
+                                id="settings">
+                                {{-- email-setting Route --}}
+                                <li class="collapsed" data-bs-toggle="collapse" data-bs-target="#emails"
+                                    aria-expanded="true">
+                                    <a href="#"><i class="bi fs-5 pe-2 bi-envelope-fill"></i>
+                                        <span class="hide-menu">{{ __('en.Emails') }}</span><i
+                                            class="bi bi-caret-down-fill right"></i></a>
+                                </li>
+                                <ul class="submenu collapse {{ request()->is('emails/*') ? 'active' : '' }}"
+                                    id="emails">
+                                    <li
+                                        class="{{ request()->route()->getName() == 'email-placeholder'? 'active': '' }}">
+                                        <a href="{{ route('email-placeholder') }}"><i class="bi fs-5 pe-2 bi-collection-fill"></i><span
+                                                class="hide-menu">{{ __('en.Placeholders') }}</span></a>
+                                    </li>
+                                    <li class="{{ request()->route()->getName() == 'email-template'? 'active': '' }}">
+                                        <a href="{{ route('email-template') }}"><i class="bi fs-5 pe-2 bi-bookmark-star-fill"></i><span
+                                                class="hide-menu">{{ __('en.Template') }}</span></a>
+                                    </li>
+                                </ul>
+                                {{-- general-setting Route --}}
+                                  <li class="{{ request()->route()->getName() == 'setting'? 'active': '' }}">
+                                      <a href="{{ route('setting') }}"><i class="bi fs-5 pe-2 bi-gear"></i><span
+                                              class="hide-menu">{{ __('en.General Settings') }}</span></a>
+                                  </li>
+                            </ul>
                       </ul>
                   </nav>
               </div>
